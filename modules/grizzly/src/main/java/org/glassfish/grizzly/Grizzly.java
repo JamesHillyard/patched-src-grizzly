@@ -66,7 +66,7 @@ public class Grizzly {
         }
         String version = prop.getProperty("grizzly.version");
         Matcher matcher = versionPattern.matcher(version);
-        if (matcher.matches()) {
+        if (matcher.find()) {
             dotedVersion = matcher.group(1);
             major = Integer.parseInt(matcher.group(2));
             minor = Integer.parseInt(matcher.group(3));
